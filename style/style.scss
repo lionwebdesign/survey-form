@@ -1,0 +1,123 @@
+$color-primario: #09a8c3;
+$color-secundario: #8dd8f8;
+
+$color-titulos: white;
+$color-textos: darken($color-titulos, 15%);
+
+h1 {
+	font-size: 2.85rem !important;
+}
+
+h2 {
+	font-size: 2rem !important;
+}
+
+h3 {
+	font-size: 1.65rem !important;
+}
+
+h4 {
+	font-size: 1.45rem !important;
+}
+
+p {
+	font-size: 1.15rem !important;
+}
+
+$mobile-h1-font-size: 1.8rem !important;
+$mobile-h2-font-size: 1.8rem !important;
+$mobile-h3-font-size: 1.5rem !important;
+$mobile-h4-font-size: 1.25rem !important;
+$mobile-p-font-size: 1rem !important;
+@media (max-width: 600px) {
+	h1 {
+		font-size: $mobile-h1-font-size;
+	}
+	h2 {
+		font-size: $mobile-h2-font-size;
+	}
+	h3 {
+		font-size: $mobile-h3-font-size;
+	}
+	h4 {
+		font-size: $mobile-h4-font-size;
+	}
+	p {
+		font-size: $mobile-p-font-size;
+	}
+}
+
+.titulos {
+    color: $color-titulos;
+}
+
+.textos {
+    color: $color-textos;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../media/computer-1245714_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    .formulario-container {
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding-top: 100px;
+        @media screen and (max-width: 600px) {
+            margin-bottom: 50px;
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+
+        .logo-container {
+            text-align: center;
+            a {
+                .brand-logo {
+                    max-width: 308px;
+                    height: auto;
+                    @media screen and (max-width: 600px) {
+                        max-width: 154px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .formulario {
+            padding-bottom: 100px;
+            @media screen and (max-width: 600px) {
+                padding-bottom: 50px;                
+            }
+            .form-group {
+                input {
+                    color: $color-textos;
+                    border-bottom: 1px solid $color-primario;
+                }
+                
+                select {
+                    background-color: transparent;
+                    border-bottom: 1px solid $color-primario;
+                    color: $color-textos;
+                    &:active {
+                        border: none;
+                    }
+                    option {
+                        color: $color-primario;
+                    }
+                }
+
+                textarea {
+                    color: $color-textos;
+                }
+
+                button {
+                    margin-top: 50px;
+                }
+            } 
+        }
+    }
+}
